@@ -1,0 +1,176 @@
+{
+  "noDataFound": "Nenhum dado encontrado",
+  "menu": {
+    "home": "Casa",
+    "blog": "Blogue",
+    "contactUs": "Contate-nos",
+    "start": "Começar",
+    "startNow": "Comece agora"
+  },
+  "heroSection": {
+    "welcome": "Bem-vindo ao",
+    "oralMonitoringPlatform": "Oral<br />e-Health<br />Plataforma<br />Monitoranto",
+    "keepTract": "Acompanhe o que te faz sorrir.",
+    "dentalClinicRecord": "Trabalhando para dar a você um registro na mão da clínica odontológica completo, detalhado e fácil de acessar e gerenciar."
+  },
+  "themeFeature": {
+    "appServices": "SERVIÇOS DE APLICATIVOS",
+    "clinicalDentalData": "A Oral e-Health Platform dá-lhe o direito de armazenar, aceder e partilhar os seus dados clínicos dentários."
+  },
+  "contactUs": {
+    "mailUs": "Envie-nos a sua mensagem",
+    "name": "Nome",
+    "email": "E-mail",
+    "Subject": "Sujeito",
+    "description": "Sua necessidade e descrição",
+    "sendMessage": "Enviar mensagem"
+  },
+  "start": {
+    "logIn": "Conecte-se",
+    "username": "Nome de usuário",
+    "password": "Senha",
+    "createNewAccount": "Criar uma nova conta",
+    "helloFriend": "Hello, Friend!",
+    "startJourney": "Insira seus dados pessoais e comece a jornada conosco",
+    "signUp": "INSCREVER-SE",
+    "welcome": "Bem vindo de volta!",
+    "pleaseLogIn": "Para se manter conectado conosco, faça login com suas informações pessoais",
+    "createAccount": "Criar uma conta",
+    "email": "Email",
+    "firstName": "Primeiro nome",
+    "lastName": "Sobrenome",
+    "birthdayDate": "Data de nascimento",
+    "proceed": "CONTINUAR",
+    "address": "Endereço",
+    "country": "País",
+    "nationality": "Nacionalidade",
+    "language": "Linguagem"
+  },
+  "sidebar": {
+    "start": "Começar",
+    "messages": "Mensagens",
+    "appointments": "Compromissos",
+    "alerts": "Alertas",
+    "patients": "Meus pacientes",
+    "invitations": "Meus convites",
+    "history": "História"
+  },
+  "actionButtons": {
+    "save": "Salvar",
+    "discard": "descartar",
+    "delete": "Excluir",
+    "resetAll": "Reiniciar tudo"
+  },
+  "header": {
+    "profile": "Perfil",
+    "switchAs": "Mudar como",
+    "logout": "Sair",
+    "notifications": "Notificações"
+  },
+  "notification": {
+    "clinic": "A clínica",
+    "doctor": "O Dr.",
+    "ownerRequest": "enviou-lhe um convite",
+    "doctorRequest": "enviou-lhe um convite para a clínica",
+    "approval": "aceitou o seu convite",
+    "patientRequestDoctor": "quer dar-lhe um acesso",
+    "patientApproval": "aceito seu pedido de acesso"
+  },
+  "profile": {
+    "info": "informação",
+    "diseases": "doenças",
+    "medication": "medicamento",
+    "clinicManagement": "Gestão Clínica",
+    "doctors": "Doutores",
+    "accessManagement": "Gerenciamento de acesso"
+  },
+  "info": {
+    "profile": "Perfil",
+    "save": "Salvar",
+    "discard": "descartar",
+    "firstName": "Primeiro nome",
+    "lastName": "Sobrenome",
+    "username": "Nome de usuário",
+    "email": "Email",
+    "birthDate": "Data de nascimento",
+    "street": "Rua",
+    "city": "Cidade",
+    "country": "País",
+    "countryLabel": "País",
+    "language": "Linguagem",
+    "permissionMessage": "Está a permitir a participação em estudos universitários, partilhando as suas respostas aos inquéritos e os seus contactos pessoais para contacto posterior",
+    "AccessLabel": "Acesse as pesquisas",
+    "onBehalf": "Pode atuar em nome de:",
+    "dentist": "eu sou dentista",
+    "specialty": "Especialidade"
+  },
+  "diseases": {
+    "associatedDiseases": "Doenças Associadas",
+    "sufferFrom": "Você sofre de"
+  },
+  "doctors": {
+    "searchDoctors": "Pesquisar médicos",
+    "giveAccess": "Dar acesso"
+  },
+  "accessManagement": {
+    "manageAccess": "Gerir o acesso aos meus dados"
+  },
+  "clinicManagement": {
+    "manageClinics": "Gerenciar Clínicas",
+    "searchClinic": "Pesquisar clínica",
+    "addClinic": "Adicionar clínica",
+    "joinClinic": "Junte-se à clínica"
+  },
+  "addClinic": {
+    "save": "Salvar",
+    "discard": "descartar",
+    "clinicName": "Nome da Clínica",
+    "street": "Rua",
+    "streetTwo": "Rua:2",
+    "state": "Estado",
+    "zipcode": "Código postal",
+    "city": "Cidade",
+    "country": "País",
+    "addNewDoctor": "Digite para adicionar novo médico"
+  },
+  "joinClinic": {
+    "searchClinics": "Pesquisar clínicas",
+    "accessRequest": "Enviar solicitação de acesso"
+  },
+  "startPage": {
+    "currentClinic": "Qual é a sua clínica atual?"
+  },
+  "messages": {
+    "searchContact": "Pesquisar contato",
+    "hitEnter": "Digite e pressione Enter"
+  },
+  "patients": {
+    "searchPatient": "Pesquisar paciente"
+  },
+  "history": {
+    "generalHistory": "História geral",
+    "search": "Procurar"
+  },
+  "adminAppointment": {
+    "newAppointment": "Novo compromisso",
+    "ListView": "Exibição de lista",
+    "CalendarView": "Visualização de calendário",
+    "typeSomething": "Digite algo"
+  },
+  "singleAppointment": {
+    "Patient": "Paciente",
+    "startDate": "Data de início",
+    "duration": "Duração",
+    "typeOfAppointment": "Tipo de compromisso",
+    "specialities": "Especialidades da clínica odontológica",
+    "AppointmentCode": "Código de nomeação",
+    "diagnostic": "Diagnóstico",
+    "treatment": "Tratamento",
+    "text": "Texto",
+    "fileInput": "Entrada de arquivo"
+  },
+  "patientInvitations": {
+    "searchPatient": "Pesquisar paciente",
+    "reload": "Recarregar"
+  }
+}

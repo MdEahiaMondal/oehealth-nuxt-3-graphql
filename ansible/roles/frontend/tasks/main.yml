@@ -1,0 +1,45 @@
+---
+- name: Install packages based on package.json
+  become: false
+  shell: |
+    yarn install \
+    --prefer-offline \
+    --frozen-lockfile \
+    --non-interactive \
+    --production=false
+  args:
+    chdir: "{{ frontend_project_path }}"
+
+- name: Write .env file for the Frontend
+  become: false
+  template:
+    src: env.j2
+    dest: "{{ frontend_project_path }}/.env"
+
+- name: Build the frontend project
+  become: false
+  shell: "node --max-old-space-size=4096 {{ frontend_project_path }}/node_modules/nuxt/bin/nuxt.mjs build"
+  args:
+    chdir: "{{ frontend_project_path }}"
+
+# - name: Install packages based on package.json for production
+#   become: false
+#   shell: |
+#     yarn install \
+#     --prefer-offline \
+#     --frozen-lockfile \
+#     --non-interactive \
+#     --production=true
+#   args:
+#     chdir: "{{ frontend_project_path }}"
+
+- name: Write PM2 config file for the Frontend
+  become: false
+  template:
+    src: ecosystem.j2
+    dest: "{{ frontend_project_path }}/ecosystem.config.js"
+  notify:
+    - delete pm2
+    - start pm2
+    - remove cache
+    - reload nginx

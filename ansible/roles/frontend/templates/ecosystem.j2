@@ -1,0 +1,21 @@
+module.exports = {
+  apps: [
+    {
+      name: "{{ application_name }}",
+      exec_mode: "cluster",
+      instances: "max",
+      script: "{{ frontend_project_path }}/.output/server/index.mjs",
+      autorestart: true,
+      env: {
+        NODE_ENV: "production",
+        HOST: "0.0.0.0",
+        PORT: 3000,
+        NUXT_PUBLIC_API_CLIENT: "https://{{ backend_server_name }}/graphql",
+        NUXT_API_SERVER: "https://{{ backend_server_name }}/graphql",
+        NUXT_PUBLIC_WS_CLIENT: "wss://{{ backend_server_name }}",
+        NUXT_WS_SERVER: "wss://{{ backend_server_name }}",
+        NUXT_PUBLIC_SITE_URL: "https://{{ frontend_server_name }}",
+      },
+    },
+  ],
+}

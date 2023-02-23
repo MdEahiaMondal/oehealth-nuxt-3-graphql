@@ -1,0 +1,184 @@
+{
+  "noDataFound": "No data found",
+  "menu": {
+    "home": "Home",
+    "blog": "Blog",
+    "contactUs": "Contact Us",
+    "start": "Start",
+    "startNow": "Start now"
+  },
+  "heroSection": {
+    "welcome": "Welcome to",
+    "oralMonitoringPlatform": "Oral<br />e-Health<br />Monitoring<br />Platform",
+    "keepTract": "Keep track of what makes you smile.",
+    "dentalClinicRecord": "Working to give you a complete, detailed and easy to access and manage in-hand dental clinic record."
+  },
+  "themeFeature": {
+    "appServices": "SERVIÇOS DE APLICATIVOS",
+    "clinicalDentalData": "Oral e-Health Platform gives you the right to store, access and share your clinical dental data.",
+    "featureDescription": {
+      "description1": "Manage your dental history with a functional and concise organization.",
+      "description2": "Risk assessment calculated by professionals.",
+      "description3": "Real-time access to your oral health care provider: message board with free and open communication.",
+      "description4": "Your oral health will no longer stay behind with our alarmistic system."
+    }
+  },
+  "contactUs": {
+    "mailUs": "Mail us your message",
+    "name": "Name",
+    "email": "Email",
+    "Subject": "Subject",
+    "description": "Your Need & Description",
+    "sendMessage": "Send Message"
+  },
+  "start": {
+    "logIn": "Log in",
+    "username": "Username",
+    "password": "Password",
+    "createNewAccount": "Create a new account",
+    "helloFriend": "Hello, Friend!",
+    "startJourney": "Enter your personal details and start journey with us",
+    "signUp": "SIGN UP",
+    "welcome": "Welcome Back!",
+    "pleaseLogIn": "To Keep connected with us please login with your personnel info",
+    "createAccount": "Create Account",
+    "email": "Email",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "birthdayDate": "Birthday date",
+    "proceed": "PROCEED",
+    "address": "Address",
+    "country": "Country",
+    "nationality": "Nationality",
+    "language": "Language"
+  },
+  "sidebar": {
+    "start": "Start",
+    "messages": "Messages",
+    "appointments": "Appointments",
+    "alerts": "Alerts",
+    "patients": "My Patients",
+    "invitations": "My Invitations",
+    "history": "History"
+  },
+  "actionButtons": {
+    "save": "Save",
+    "discard": "Discard",
+    "delete": "Delete",
+    "resetAll": "Reset All"
+  },
+  "header": {
+    "profile": "Profile",
+    "switchAs": "Switch As",
+    "logout": "Logout",
+    "notifications": "Notifications"
+  },
+  "notification": {
+    "clinic": "Clinic",
+    "doctor": "Dr.",
+    "ownerRequest": "has sent you an invitation",
+    "doctorRequest": "has sent you an invitation to",
+    "approval": "accepted your invitation",
+    "patientRequestDoctor": "wants to give you an access",
+    "patientApproval": "accepted your access request"
+  },
+  "profile": {
+    "info": "INFO",
+    "diseases": "DISEASES",
+    "medication": "MEDICATION",
+    "clinicManagement": "CLINIC MANAGEMENT",
+    "doctors": "DOCTORS",
+    "accessManagement": "ACCESS MANAGEMENT"
+  },
+  "info": {
+    "profile": "Profile",
+    "save": "Save",
+    "discard": "Discard",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "birthDate": "Date of Birth",
+    "state": "State",
+    "street": "Street",
+    "street2": "Street2",
+    "city": "City",
+    "country": "Country",
+    "countryLabel": "Country",
+    "language": "Language",
+    "permissionMessage": "You are allowing the participation in university studies, sharing your answers to the surveys and your personal contacts for posterior contact",
+    "AccessLabel": "Access to the surveys",
+    "onBehalf": "Can act on behalf of:",
+    "dentist": "I am Dentist",
+    "specialty": "Specialty"
+  },
+  "diseases": {
+    "associatedDiseases": "Associated Diseases",
+    "sufferFrom": "Do you suffer from"
+  },
+  "doctors": {
+    "searchDoctors": "Search Doctors",
+    "giveAccess": "Give Access"
+  },
+  "accessManagement": {
+    "manageAccess": "Manage the access to my data"
+  },
+  "clinicManagement": {
+    "manageClinics": "Manage Clinics",
+    "searchClinic": "Search Clinic",
+    "addClinic": "Add Clinic",
+    "joinClinic": "Join Clinic"
+  },
+  "addClinic": {
+    "save": "Save",
+    "discard": "Discard",
+    "clinicName": "Clinic Name",
+    "street": "Street",
+    "streetTwo": "Street:2",
+    "state": "State",
+    "zipcode": "Zipcode",
+    "city": "City",
+    "country": "Country",
+    "addNewDoctor": "Type to add new doctor"
+  },
+  "joinClinic": {
+    "searchClinics": "Search Clinics",
+    "accessRequest": "Send Access Request"
+  },
+  "startPage": {
+    "currentClinic": "What is your current clinic?"
+  },
+  "messages": {
+    "searchContact": "Search contact",
+    "hitEnter": "Type and hit Enter"
+  },
+  "patients": {
+    "searchPatient": "Search Patient"
+  },
+  "history": {
+    "generalHistory": "General history",
+    "search": "Search"
+  },
+  "adminAppointment": {
+    "newAppointment": "New Appointment",
+    "ListView": "List View",
+    "CalendarView": "Calendar View",
+    "typeSomething": "Type something"
+  },
+  "singleAppointment": {
+    "Patient": "Patient",
+    "startDate": "Start Date",
+    "duration": "Duration",
+    "typeOfAppointment": "Type of appointment",
+    "specialities": "Dental clinic specialities",
+    "AppointmentCode": "Appointment Code",
+    "diagnostic": "Diagnostic",
+    "treatment": "Treatment",
+    "text": "Text",
+    "fileInput": "File input"
+  },
+  "patientInvitations": {
+    "searchPatient": "Search Patient",
+    "reload": "Reload"
+  }
+}

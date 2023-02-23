@@ -1,0 +1,14 @@
+.text-underline {
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.text-underline:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 1px;
+  bottom: 0;
+  border-bottom: 3px solid #7ea3d6;
+}

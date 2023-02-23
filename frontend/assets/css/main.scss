@@ -1,0 +1,9 @@
+@use "vuetify/styles";
+@import "./layout/sidebar";
+@import "./layout/container";
+@import "./layout/horizontal";
+@import "./layout/topbar";
+@import "./layout/calender";
+@import "./override";
+@import "./pages/dashboards";
+@import "./pages/contact";

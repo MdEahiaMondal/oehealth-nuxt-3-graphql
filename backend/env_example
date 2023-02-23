@@ -1,0 +1,31 @@
+
+# Rename this file to .env and fill in the values with your own
+COMPOSE_PROJECT_NAME="oehealth"
+# Backend
+DJANGO_SECRET_KEY='django-insecure-=o83vfw(*!k#_lqq^w2!z-g@*jk@ylze-&*x)%oji)-*(g_bm('
+DJANGO_SETTINGS_MODULE="backend.settings"
+DJANGO_ALLOWED_HOSTS="127.0.0.1,localhost,localhost:8000,api:8000,api"
+TRUSTED_CORS_ORIGINS="http://localhost:3000,http://api:3000,http://127.0.0.1:3000,http://localhost"
+DJANGO_DEBUG=True
+DATABASE_URL='postgres://ohealth:ohealth@db:5432/ohealth'
+REDIS_URL='redis://:password@redis:6379/0'
+MEDIA_URL="/media/"
+STATIC_URL="/static/"
+ENABLE_ACCOUNT_CONFIRMATION_BY_EMAIL=True
+ENABLE_SSL=False
+JWT_TTL_REQUEST_EMAIL_CHANGE="1 hour"
+CELERY_BROKER_URL=
+CLOUDAMQP_URL=
+
+
+# Frontend
+API_CLIENT="http://localhost:8000"
+API_SERVER="http://api:8000"
+WS_CLIENT="ws://localhost:8000"
+WS_SERVER="ws://api"
+SITE_URL="http://localhost:3000"
+EMAIL_HOST='smtp.mailtrap.io'
+EMAIL_HOST_USER='3f57fa71bb8322'
+EMAIL_HOST_PASSWORD='187c764f5c24be'
+EMAIL_PORT='2525'
+EMAIL_FROM=eliyas.devxhub@gmail.com

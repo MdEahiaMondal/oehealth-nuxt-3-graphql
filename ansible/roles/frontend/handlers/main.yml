@@ -1,0 +1,15 @@
+---
+- name: delete pm2
+  become: false
+  shell: pm2 delete {{ application_name }}
+  args:
+    chdir: "{{ frontend_project_path }}"
+
+- name: start pm2
+  become: false
+  shell: pm2 start --only {{ application_name }}
+  args:
+    chdir: "{{ frontend_project_path }}"
+
+- name: remove cache
+  shell: rm -rf /var/cache/frontend/*

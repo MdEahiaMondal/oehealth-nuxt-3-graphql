@@ -1,0 +1,3 @@
+repo_path: "{{ ansistrano_release_path.stdout }}"
+frontend_project_path: "{{ repo_path }}/frontend"
+frontend_project_name: "oehealth"

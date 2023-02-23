@@ -1,0 +1,7 @@
+# Dev Server
+[dev]
+188.165.253.59
+
+# Production Server
+[prod]
+51.255.80.175
