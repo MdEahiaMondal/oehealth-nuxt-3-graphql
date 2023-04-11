@@ -8,16 +8,19 @@ import { cookie } from 'src/boot/cookie'
 interface State {
   token: string | null
   user: User | null
+  activeCompany: number | null
 }
 
 export const useAuthStore = defineStore('auth', {
   state: (): State => ({
     token: null,
     user: null,
+    activeCompany: null
   }),
   getters: {
     isLoggedIn: (state) => !!state.token,
     isDoctor: (state) => state.user?.groups?.edges?.some(group => group.node?.name === 'Doctor') || false,
+    getActiveCompany: (state) => state.activeCompany
   },
   actions: {
     // set auth token
@@ -25,6 +28,10 @@ export const useAuthStore = defineStore('auth', {
       this.token = token
       cookie.set('JWT', token)
       graphQLClient.setHeader('Authorization', `JWT ${token}`)
+    },
+    // set activeCompany
+    setActiveCompany(activeCompany: any) {
+      this.activeCompany = activeCompany
     },
     // set user
     setUser(user: User) {
@@ -79,7 +86,7 @@ export const useAuthStore = defineStore('auth', {
     // load auth user active company
     async userActiveCompany(userId: number, isActive: boolean) {
       const query = gql`
-        query ($userId: ID, $isActive: Boolean) {
+        query ($userId: Float, $isActive: Boolean) {
           userCompany(user_Id: $userId, isActive: $isActive, first: 1) {
             edges {
               node {

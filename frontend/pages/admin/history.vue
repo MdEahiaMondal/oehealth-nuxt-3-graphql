@@ -5,7 +5,7 @@ import { useAuth } from "~~/composables/useAuth";
 import { useAppointment } from "~/composables/useAppointment";
 
 definePageMeta({
-  layout: "admin",
+  layout: "admin"
 });
 
 const { getUserProfile } = useAuth();

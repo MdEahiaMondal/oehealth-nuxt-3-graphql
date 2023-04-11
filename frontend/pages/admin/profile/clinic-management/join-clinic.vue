@@ -7,6 +7,7 @@ import { useClinic } from "~~/composables/useClinic";
 import { useCommon } from "~~/composables/useCommon";
 
 definePageMeta({
+  layout: "admin",
   middleware: "doctor",
 });
 
@@ -126,6 +127,7 @@ onMounted(async () => {
     <v-col
       cols="12"
       sm="6"
+      md="4"
       lg="3"
       v-for="(clinic, index) in clinics"
       :key="index"

@@ -9,6 +9,7 @@ import { useInvitationStore } from "~/stores/invitation";
 import ConfirmationDialog from "~/components/base/ConfirmationDialog.vue";
 
 definePageMeta({
+  layout: "admin",
   middleware: "doctor",
 });
 

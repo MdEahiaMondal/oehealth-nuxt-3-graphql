@@ -38,8 +38,10 @@ export function useAuth() {
       const { viewer } = await authStore.loadUser(tokenAuth?.token)
       const { userCompany } = await authStore.userActiveCompany(viewer?.id, true)
       const company = userCompany?.edges[0]?.node?.company
+      authStore.setActiveCompany({company})
       const user = Object.assign({}, viewer, { company })
       authStore.setUser(user)
+      // console.log(user.value, "userActiveCompany")
 
       toast.success('Successfully Logged In!')
       await router.push('/admin')

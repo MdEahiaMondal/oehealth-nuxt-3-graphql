@@ -6,9 +6,10 @@
 .background-image {
   background: url(@/assets/images/page-resources/coming-soon.png);
   background-size: cover;
-  background-position: center center;
+  background-position: center center !important;
   background-repeat: no-repeat;
   overflow: hidden;
-  height: 77.5vh;
+  height: 60vh;
+  /* height: fit-content; */
 }
 </style>

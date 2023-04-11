@@ -5,6 +5,10 @@ import { useAuth } from "~~/composables/useAuth";
 import { useCommonStore } from "~~/stores/common";
 import { useNotification } from "~~/composables/useNotification";
 
+definePageMeta({
+  middleware: ["auth"],
+});
+
 const commonStore = useCommonStore();
 const { showingOverlay } = storeToRefs(commonStore);
 
@@ -39,18 +43,11 @@ onBeforeUnmount(() => {
     </v-main>
 
     <client-only>
-      <v-overlay
-        :model-value="showingOverlay"
-        class="align-center justify-center"
-      >
+      <v-overlay :model-value="showingOverlay" class="align-center justify-center">
         <v-card color="primary" dark>
           <v-card-text>
             Please wait...
-            <v-progress-linear
-              indeterminate
-              color="white"
-              class="mb-0"
-            ></v-progress-linear>
+            <v-progress-linear indeterminate color="white" class="mb-0"></v-progress-linear>
           </v-card-text>
         </v-card>
       </v-overlay>

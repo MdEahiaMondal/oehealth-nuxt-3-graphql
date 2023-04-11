@@ -9,6 +9,7 @@ import { useCommon } from "~~/composables/useCommon";
 
 definePageMeta({
   layout: "admin",
+  middleware: "doctor",
 });
 
 const { getUserProfile } = useAuth();

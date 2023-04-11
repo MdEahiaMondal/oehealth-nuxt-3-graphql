@@ -6,7 +6,8 @@ import { useQuestions } from "~~/composables/useQuestions";
 import { useCommon } from "~~/composables/useCommon";
 
 definePageMeta({
-  middleware: "patient",
+  layout: "admin",
+  middleware: ["patient"],
 });
 
 const toast = useToast();
@@ -408,7 +409,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <v-card class="rounded-0">
+    <v-card class="rounded-0">
     <v-row class="tw-w-full">
       <Form class="tw-w-full" as="v-form" @submit="handleUpdate">
         <v-col class="tw-w-full">
@@ -425,15 +426,14 @@ onMounted(async () => {
                   <v-col
                     v-if="!question.isConditionalQuestion || question.display"
                     :key="index"
-                    cols="4"
+                    cols="12" md="4" class="sm-spacing"
                   >
                     <v-list-item
-                      class="pa-0 mb-1"
                       @mouseover="question.hover = true"
                       @mouseleave="question.hover = false"
                     >
                       <v-list-item-title
-                        class="text-subtitle-2 border-2 border-gray-800 bg-blue-500 px-2 mr-7"
+                        class="text-subtitle-2 border-2 border-gray-800 bg-blue-500 pa-0 ma-0 text-wrap"
                       >
                         {{ question.title }}
                       </v-list-item-title>
@@ -531,5 +531,11 @@ onMounted(async () => {
 <style scoped>
 .width {
   max-width: 85%;
+}
+@media screen and (max-width: 960px) {
+  .sm-spacing{
+    padding: 0px;
+    margin: 0px;
+  }
 }
 </style>

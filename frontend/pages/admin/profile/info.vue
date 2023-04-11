@@ -7,6 +7,11 @@ import { useCommonStore } from "~~/stores/common";
 import { useClinicStore } from "~~/stores/clinic";
 import { useAuthStore } from "~~/stores/auth";
 
+definePageMeta({
+  layout: "admin",
+  middleware: "auth",
+});
+
 const authUserStore = useAuthStore();
 const commonStore = useCommonStore();
 const clinicStore = useClinicStore();
@@ -188,10 +193,10 @@ onMounted(async() => {
 
           <div class="mt-4">
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.firstName") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="firstName"
                   v-slot="{ field, errors }"
@@ -210,10 +215,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.lastName") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="lastName"
                   v-slot="{ field, errors }"
@@ -232,10 +237,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.username") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="username"
                   v-slot="{ field, errors }"
@@ -256,10 +261,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.email") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="email"
                   v-slot="{ field, errors }"
@@ -278,10 +283,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.birthDate") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="dateOfBirth"
                   v-slot="{ field, errors }"
@@ -300,10 +305,10 @@ onMounted(async() => {
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.street") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="street"
                   v-slot="{ field, errors }"
@@ -321,10 +326,10 @@ onMounted(async() => {
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label> Street Two</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="street2"
                   v-slot="{ field, errors }"
@@ -343,10 +348,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.country") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="country"
                   v-slot="{ field, errors }"
@@ -366,10 +371,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.city") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <Field
                   name="city"
                   v-slot="{ field, errors }"
@@ -388,10 +393,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row>
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.language") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <v-combobox
                   v-model="authUser.lang"
                   :items="getMultiLanguages"
@@ -405,10 +410,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row v-if="isSwitchToDoctor">
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.permissionMessage") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <v-checkbox
                   v-model="authUser.accessSurvey"
                   color="green"
@@ -419,10 +424,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row v-if="isSwitchToDoctor">
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.onBehalf") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <v-checkbox
                   v-model="authUser.isDentist"
                   color="green"
@@ -433,10 +438,10 @@ onMounted(async() => {
             </v-row>
 
             <v-row v-if="isSwitchToDoctor && authUser.isDentist">
-              <v-col cols="12" sm="2" class="d-flex align-center">
+              <v-col cols="12" sm="4" lg="2" class="d-flex align-center">
                 <label>{{ $t("info.specialty") }}</label>
               </v-col>
-              <v-col cols="12" sm="10">
+              <v-col cols="12" sm="8" lg="10">
                 <v-autocomplete
                   v-model="authUser.Specialty"
                   hide-details="auto"

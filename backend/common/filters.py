@@ -1,6 +1,6 @@
 from django_filters import FilterSet, CharFilter
 
-from .models import Company, CompanyUser
+from .models import Company, CompanyUser, AppointmentCode
 
 
 class CompanyFilter(FilterSet):
@@ -29,3 +29,14 @@ class CompanyUserFilter(FilterSet):
         model = CompanyUser
         fields = ["id", "user__id", "company__id", "group__id", "group__name", "status__id", "doctor__id",
                   "requested_at", "requested_by__id", "approval_by__id", "is_owner", "is_active"]
+
+
+class AppointmentCodeFilter(FilterSet):
+    name = CharFilter(field_name="name", lookup_expr='icontains')
+    code = CharFilter(field_name="code", lookup_expr='icontains')
+    description = CharFilter(field_name="description", lookup_expr='icontains')
+    lang = CharFilter(field_name="lang__id", lookup_expr='exact')
+
+    class Meta:
+        model = AppointmentCode
+        fields = "__all__"

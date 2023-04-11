@@ -2,7 +2,7 @@ from dataclasses import field
 from api.custom_node import CustomNode
 from graphene_django import DjangoObjectType
 
-from .filters import CompanyFilter, CompanyUserFilter
+from .filters import CompanyFilter, CompanyUserFilter, AppointmentCodeFilter
 from .models import (Duration, Diagnostic,
                      Treatment, Tooth,
                      Specialization, Company,
@@ -11,12 +11,12 @@ from .models import (Duration, Diagnostic,
                      Question, QuestionResponse,
                      CompanyLang,
                      DiagnosticLang,
-                    PriorityLang,
+                     PriorityLang,
                      QualificationLang,
                      QuestionLang,
                      QuestionResponseLang,
                      SpecializationLang,
-                     TreatmentLang,AppointmentCode
+                     TreatmentLang, AppointmentCode
                      )
 from api.models.user_model import MultiLanguage
 
@@ -113,13 +113,13 @@ class QuestionResponseType(DjangoObjectType):
     class Meta:
         model = QuestionResponse
         fields = "__all__"
-        filter_fields = ['id', 'title', 'question__id', 'reference_id', 'serial_no', 'created_by__id', 'updated_by__id']
+        filter_fields = ['id', 'title', 'question__id', 'reference_id',
+                         'serial_no', 'created_by__id', 'updated_by__id']
         interfaces = (CustomNode,)
-        
-        
-        
-#Multi Language Types start
-    
+
+
+# Multi Language Types start
+
 class MultiLanguageType(DjangoObjectType):
     class Meta:
         model = MultiLanguage
@@ -140,7 +140,8 @@ class DiagnosticLangType(DjangoObjectType):
     class Meta:
         model = DiagnosticLang
         fields = "__all__"
-        filter_fields = ["id", "lang__id", "lang__code", "diagnostic__id", "name"]
+        filter_fields = ["id", "lang__id",
+                         "lang__code", "diagnostic__id", "name"]
         interfaces = (CustomNode,)
 
 
@@ -148,7 +149,8 @@ class TreatmentLangType(DjangoObjectType):
     class Meta:
         model = TreatmentLang
         fields = "__all__"
-        filter_fields = ["id", "lang__id", "lang__code", "treatment__id", "name"]
+        filter_fields = ["id", "lang__id",
+                         "lang__code", "treatment__id", "name"]
         interfaces = (CustomNode,)
 
 
@@ -156,7 +158,8 @@ class SpecializationLangType(DjangoObjectType):
     class Meta:
         model = SpecializationLang
         fields = "__all__"
-        filter_fields = ["id", "lang__id", "lang__code", "specialization__id", "name"]
+        filter_fields = ["id", "lang__id",
+                         "lang__code", "specialization__id", "name"]
         interfaces = (CustomNode,)
 
 
@@ -164,14 +167,17 @@ class QuestionLangType(DjangoObjectType):
     class Meta:
         model = QuestionLang
         fields = "__all__"
-        filter_fields = ["id", "lang__id", "lang__code", "question__id", "title"]
+        filter_fields = ["id", "lang__id",
+                         "lang__code", "question__id", "title"]
         interfaces = (CustomNode,)
+
 
 class QuestionResponseLangType(DjangoObjectType):
     class Meta:
         model = QuestionResponseLang
         fields = "__all__"
-        filter_fields = ["id", "lang__id", "lang__code", "question_response__id", "title"]
+        filter_fields = ["id", "lang__id", "lang__code",
+                         "question_response__id", "title"]
         interfaces = (CustomNode,)
 
 
@@ -179,7 +185,8 @@ class QualificationLangType(DjangoObjectType):
     class Meta:
         model = QualificationLang
         fields = "__all__"
-        filter_fields = ["id", "lang__id", "lang__code", "qualification__id", "name"]
+        filter_fields = ["id", "lang__id",
+                         "lang__code", "qualification__id", "name"]
         interfaces = (CustomNode,)
 
 
@@ -187,19 +194,20 @@ class PriorityLangType(DjangoObjectType):
     class Meta:
         model = PriorityLang
         fields = "__all__"
-        filter_fields = ["id", "lang__id", "lang__code", "priority__id", "name"]
+        filter_fields = ["id", "lang__id",
+                         "lang__code", "priority__id", "name"]
         interfaces = (CustomNode,)
-        
-        
-#Multi Language Types End
 
-#Appointment Code start
+
+# Multi Language Types End
+
+# Appointment Code start
 
 class AppointmentCodeType(DjangoObjectType):
     class Meta:
         model = AppointmentCode
         fields = "__all__"
-        filter_fields = ["id","name"]
         interfaces = (CustomNode,)
-        
-#Appointment Code End 
+        filterset_class = AppointmentCodeFilter
+
+# Appointment Code End

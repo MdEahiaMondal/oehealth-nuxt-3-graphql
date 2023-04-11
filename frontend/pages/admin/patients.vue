@@ -183,7 +183,7 @@ onMounted(async () => {
               <v-btn
                 v-if="item.status.name === 'Approve'"
                 @click="rejectPatientInvitationEvent(item)"
-                class="text-info cursor-pointer ml-5"
+                class="text-info cursor-pointer ml-0"
                 small
                 icon
                 flat

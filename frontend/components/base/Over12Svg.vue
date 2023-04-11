@@ -5,7 +5,7 @@ const active = ref("");
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="517.767"
+    class="tw-max-w-full"
     height="279"
     viewBox="0 0 517.767 279"
   >

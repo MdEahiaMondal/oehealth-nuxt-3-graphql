@@ -10,6 +10,7 @@ import { useUser } from "~~/composables/useUser";
 import { useCommon } from "~~/composables/useCommon";
 
 definePageMeta({
+  layout: "admin",
   middleware: "doctor",
 });
 
@@ -376,7 +377,7 @@ onMounted(async () => {
             </v-col>
 
             <v-col cols="12" lg="6">
-              <v-card class="tw-border tw-mt-3">
+              <v-card class="tw-border tw-mt-3 tw-mb-4">
                 <v-card-text class="tw-p-2">
                   <v-autocomplete
                     v-model="selectedDoctors"

@@ -41,6 +41,10 @@ module.exports = configure(function (/* ctx */) {
       'app.scss'
     ],
 
+    bin: {
+      linuxAndroidStudio: '/snap/bin/android-studio'
+    },
+
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
@@ -59,7 +63,7 @@ module.exports = configure(function (/* ctx */) {
     build: {
       target: {
         browser: ['es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
-        node: 'node16'
+        node: 'node18'
       },
 
       vueRouterMode: 'history', // available values: 'hash', 'history'
@@ -81,20 +85,28 @@ module.exports = configure(function (/* ctx */) {
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
 
-      vitePlugins: [
-        ['@intlify/vite-plugin-vue-i18n', {
-          // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
-          // compositionOnly: false,
-
-          // you need to set i18n resource including paths !
-          include: path.resolve(__dirname, './src/i18n/**')
-        }]
-      ],
+      vitePlugins: [],
+      chainWebpack: chain => {
+        chain.module
+          .rule('i18n-resource')
+            .test(/\.(json5?|ya?ml)$/)
+              .include.add(path.resolve(__dirname, './src/i18n'))
+              .end()
+            .type('javascript/auto')
+            .use('i18n-resource')
+              .loader('@intlify/vue-i18n-loader')
+        chain.module
+          .rule('i18n')
+            .resourceQuery(/blockType=i18n/)
+            .type('javascript/auto')
+            .use('i18n')
+              .loader('@intlify/vue-i18n-loader')
+      }
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
-      // https: true
+      https: false,
       open: false // opens browser window automatically
     },
 

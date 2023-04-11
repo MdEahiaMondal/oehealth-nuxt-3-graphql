@@ -10,20 +10,20 @@ from .models import (Duration, Diagnostic,
                      Specialization, Company,
                      CompanyUser, LookUp, Priority,
                      Question, QuestionResponse,
-                     CompanyLang,DiagnosticLang,
-                    PriorityLang,
+                     CompanyLang, DiagnosticLang,
+                     PriorityLang,
                      QualificationLang,
-                     QuestionLang,QuestionResponseLang,
-                     SpecializationLang,TreatmentLang,AppointmentCode
+                     QuestionLang, QuestionResponseLang,
+                     SpecializationLang, TreatmentLang, AppointmentCode
                      )
 from .types import (DurationType, DiagnosticType,
                     TreatmentType, ToothType,
                     SpecializationType, CompanyType,
                     CompanyUserType, LookUpType, PriorityType,
                     QuestionType, QuestionResponseType,
-                    MultiLanguageType,CompanyLangType,DiagnosticLangType,
-                    TreatmentLangType,SpecializationLangType,QuestionLangType,
-                    QuestionResponseLangType,QualificationLangType,PriorityLangType,
+                    MultiLanguageType, CompanyLangType, DiagnosticLangType,
+                    TreatmentLangType, SpecializationLangType, QuestionLangType,
+                    QuestionResponseLangType, QualificationLangType, PriorityLangType,
                     AppointmentCodeType
                     )
 
@@ -103,66 +103,63 @@ class Query(graphene.ObjectType):
 
     def resolve_questionResponses(self, info, **kwargs):
         return QuestionResponse.objects.prefetch_related('questionresponseslang_set').all()
-     
-    
-    #Multi Language Quries Start
-    
+
+    # Multi Language Quries Start
+
     multiLanguage = graphene.List(MultiLanguageType)
-    
+
     def resolve_multiLanguage(self, info, **kwargs):
         return MultiLanguage.objects.all()
-    
-    
+
     companyLang = graphene.List(CompanyLangType)
-    
+
     def resolve_companyLang(self, info, **kwargs):
         return CompanyLang.objects.all()
-    
-    
+
     diagnosticLang = graphene.List(DiagnosticLangType)
-    
+
     def resolve_diagnosticLang(self, info, **kwargs):
         return DiagnosticLang.objects.all()
-    
+
     treatmentLang = graphene.List(TreatmentLangType)
-    
+
     def resolve_treatmentLang(self, info, **kwargs):
         return TreatmentLang.objects.all()
-    
+
     specializationLang = graphene.List(SpecializationLangType)
-    
+
     def resolve_specializationLang(self, info, **kwargs):
-         return SpecializationLang.objects.all()
-     
+        return SpecializationLang.objects.all()
+
     questionLang = graphene.List(QuestionLangType)
+
     def resolve_questionLang(self, info, **kwargs):
         return QuestionLang.objects.all()
-    
+
     questionResponseLang = graphene.List(QuestionResponseLangType)
+
     def resolve_questionResponseLang(self, info, **kwargs):
         return QuestionResponseLang.objects.all()
-    
-    
+
     qualificationLang = graphene.List(QualificationLangType)
+
     def resolve_qualificationLang(self, info, **kwargs):
         return QualificationLang.objects.all()
-    
-    
+
     priorityLang = graphene.List(PriorityLangType)
+
     def resolve_priorityLang(self, info, **kwargs):
         return PriorityLang.objects.all()
-    
-    #Multi Language Quries End
-      
-    #Appointment Code Quries Start
-    
-    appointmentCode = graphene.List(AppointmentCodeType)
+
+    # Multi Language Quries End
+
+    # Appointment Code Quries Start
+
+    appointmentCode = DjangoFilterConnectionField(AppointmentCodeType)
     # appointmentCode = DjangoFilterConnectionField(AppointmentCodeType)
+
     @login_required
     def resolve_appointmentCode(self, info, **kwargs):
         return AppointmentCode.objects.all()
-    
-    #Appointment Code Quries End
-    
-    
-    
+
+    # Appointment Code Quries End

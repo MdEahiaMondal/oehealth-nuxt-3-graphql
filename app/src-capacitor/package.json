@@ -5,13 +5,15 @@
   "author": "Eliyas Hossain <eliyas.ru1991@gmail.com>",
   "private": true,
   "dependencies": {
-    "@capacitor-community/barcode-scanner": "^2.0.0",
-    "@capacitor/android": "^3.0.0",
-    "@capacitor/app": "^1.0.0",
-    "@capacitor/cli": "^3.0.0",
-    "@capacitor/core": "^3.0.0",
-    "@capacitor/ios": "^3.0.0",
-    "@capacitor/push-notifications": "^1.0.0",
-    "@capacitor/splash-screen": "^1.0.0"
+    "@capacitor-community/barcode-scanner": "^3.0.3",
+    "@capacitor/android": "^4.7.1",
+    "@capacitor/app": "^4.1.1",
+    "@capacitor/cli": "^4.7.1",
+    "@capacitor/core": "^4.7.1",
+    "@capacitor/device": "^4.1.0",
+    "@capacitor/ios": "^4.7.1",
+    "@capacitor/push-notifications": "^4.1.2",
+    "@capacitor/splash-screen": "^4.2.0",
+    "firebase": "^9.17.2"
   }
 }

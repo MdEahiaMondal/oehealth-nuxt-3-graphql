@@ -952,7 +952,7 @@ const tableData = ref([
       ></BaseActionButtons>
       <v-btn v-else color="green" @click="$router.back()"> Back </v-btn>
       <v-row class="mb-8">
-        <v-col v-if="isDoctor" cols="3">
+        <v-col v-if="isDoctor" cols="12" sm="6" lg="3">
           <v-autocomplete
             v-model="selectedPatient"
             :items="patients"
@@ -987,7 +987,7 @@ const tableData = ref([
           ></v-autocomplete>
         </v-col>
 
-        <v-col v-if="isDoctor" cols="3">
+        <v-col v-if="isDoctor" cols="12" sm="6" lg="3">
           <v-combobox
             clearable
             class="mt-4"
@@ -1057,7 +1057,7 @@ const tableData = ref([
           </v-table>
         </v-col>
 
-        <v-col cols="6">
+        <v-col cols="12" sm="12" lg="6">
           <BaseUnder12Svg
             @selectedTeethNumber="selectedTeethNumber"
             v-if="under12"

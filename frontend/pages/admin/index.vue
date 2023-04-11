@@ -7,6 +7,7 @@ import { useInvitationStore } from "~/stores/invitation";
 
 definePageMeta({
   layout: "admin",
+  middleware: "auth"
 });
 
 const invitationStore = useInvitationStore();
@@ -90,8 +91,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <v-container fluid class="down-top-padding">
-    <v-row v-if="isDoctor" class="mt-2 pa-4">
+  <v-container fluid class="down-top-padding pa-0">
+    <v-row v-if="isDoctor" class="mt-2 pa-0">
       <v-col cols="12" md="6">
         <v-card class="px-4 py-6" height="100%">
           <ClientOnly>

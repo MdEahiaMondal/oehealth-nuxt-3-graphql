@@ -3,9 +3,9 @@ const active = ref("");
 </script>
 
 <template>
-  <svg
+   <svg 
     xmlns="http://www.w3.org/2000/svg"
-    width="329.61"
+    class="tw-max-w-full"
     height="279"
     viewBox="0 0 329.61 279"
   >

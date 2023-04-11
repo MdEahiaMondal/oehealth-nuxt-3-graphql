@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { cloneDeep } from 'lodash-es'
 import { Notification, NotificationResult } from "~~/types/notification";
 import {
   fetchNotificationsQuery,
@@ -24,7 +25,8 @@ export const useNotificationStore = defineStore("notification", () => {
   };
 
   const pushNotification = (notification: Notification) => {
-    notificationResults.value.unshift(notification);
+    const deepClone = cloneDeep(notificationResults);
+    deepClone.value.unshift(notification);
   };
 
   const updateNotification = async (id: any, isRead: any) => {

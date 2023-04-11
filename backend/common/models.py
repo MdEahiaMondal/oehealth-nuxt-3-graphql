@@ -547,6 +547,8 @@ class AppointmentCode(models.Model):
         ('T', 'Treatment'),
         ('M', 'Material'),
     ]
+    lang = models.ForeignKey(
+        MultiLanguage, on_delete=models.CASCADE, null=True, blank=True)
     code_type = models.CharField(
         max_length=1, choices=CodeTypes, blank=True, null=True)
     code = models.CharField(max_length=255, blank=True, null=True)

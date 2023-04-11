@@ -2,7 +2,8 @@ import { useChatStore } from "~~/stores/chat";
 
 export const useChat = () => {
   const config = useRuntimeConfig();
-  const store = useChatStore();
+  const chatStore = useChatStore();
+  const { pushConversation } = chatStore
   const socket = ref();
 
   const joinChatRoom = (connection: any) => {
@@ -23,7 +24,7 @@ export const useChat = () => {
         const data = JSON.parse(e.data);
         if (data) {
           const { conversation } = data;
-          store.pushConversation(conversation);
+          pushConversation(conversation);
         }
       };
     }
@@ -57,6 +58,7 @@ export const useChat = () => {
     joinChatRoom,
     sendMessage,
     receiveMessage,
+    pushConversation,
     sendMessageWhenOpen,
     closeSocket,
     scrollToBottom,

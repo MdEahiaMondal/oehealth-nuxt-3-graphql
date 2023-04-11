@@ -7,7 +7,8 @@ import { useCommon } from "~~/composables/useCommon";
 import { GroupType } from "~~/types/company";
 
 definePageMeta({
-  middleware: "patient",
+  layout: "admin",
+  middleware: ["patient"],
 });
 
 const { getUserProfile } = useAuth();
@@ -153,6 +154,7 @@ onMounted(async () => {
     <v-col
       cols="12"
       sm="6"
+      md="4"
       lg="3"
       v-for="(doctor, index) in doctors"
       :key="index"
